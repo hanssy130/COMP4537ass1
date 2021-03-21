@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Choose</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #main_body {
+            width: 600px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_body">
+        <center>
+            <a href="/COMP4537/ass1/admin">
+                <h1>Admin/Question Creation Page</h1>
+            </a>
+            <br><br>
+            <a href="/COMP4537/ass1/student">
+                <h1>Student Page</h1>
+            </a>
+        </center>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var windowHeight = $(window).height();
+            var windowWidth = $(window).width();
+            var main = $("#main_body");
+            $("#main_body").css({
+                top: ((windowHeight / 2) - (main.height() / 2)) + "px",
+                left: ((windowWidth / 2) - (main.width() / 2)) + "px"
+            });
+        });
+    </script>
+</body>
